@@ -15,14 +15,14 @@ form { height: 532px; }
 <h1>SVG + Media Queries + CSS Animated Transition = bork</h1>
 <p>Been using SVG for over a decade, love the stuff. Happy to see browsers getting features that will make experimental play fun again! Reworking the theme of my site, I recalled a while back an Opera dev posted about making <a href="https://dev.opera.com/blog/how-media-queries-allow-you-to-optimize-svg-icons-for-several-sizes/">adaptable logos for sites</a> and I’d only used it once before, so thought, sure, try it for the branding header which will adapt between mobile phone, mobile device, desktop computer and print.</p>
 <p>Unfortunately, play halted due to two bugs in two browsers. Firefox has this one, <a href="https://bugzil.la/951539">bugzil.la/951539</a> whereby transforms block transition use. Chromium however, reuses media queries between shared sources, so using transitions in these images below would causes them all to slowly animate to the largest variant of min-height.</p>
-<p>These halts my endeavour because I was hoping for re‐use across the page, as well as an opacity blend so the change is not sudden. I excell at making compact SVG, in this instance because the large version is pixel aligned on a different pixel grid to the other path (it is a very compact QR Code), I use a matrix transformation to scale the group.</p>
+<p>These halt my endeavour because I was hoping for re‐use them across the page, as well as an opacity blend so the change is not sudden. I excel at making compact SVG, in this instance because the large version is pixel aligned to a different pixel grid to the other path (it is a compact QR Code), I use a matrix transformation to scale the group.</p>
 <p>To see the actual bug happen, <a href="./index-transition.html">visit this other page</a>.</p>
 <p>~ johndrinkwater <time datetime="2013-10-24">2015-02-13</time></p>
 
 <dl>
 <dt>Small</dt><dd><img id="head" src="wip.svg" height="47" alt="johndrinkwater.head.svg"></dd>
 <dt>Medium<dt><dd><img id="avatar" src="wip.svg" height="64" alt="johndrinkwater.avatar.svg"></dd>
-<dt>Large<br>Print</dt><dd><img id="qrcode" src="wip.svg" height="267" alt="johndrinkwater.qrcode.svg"></dd>
+<dt>Large ⁄ Print</dt><dd><img id="qrcode" src="wip.svg" height="267" alt="johndrinkwater.qrcode.svg"></dd>
 </dl>
 
 <p><small>The example below requires JavaScript, sorry</small></p>
