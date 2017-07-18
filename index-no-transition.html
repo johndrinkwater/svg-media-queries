@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>SVG + Media Queries + CSS Animated Transition = bork</title></head>
+<style>
+body { background: #CFDDE9; color: #000; text-shadow: 2px 2px 4px rgba(2, 35, 7, 0.4) }
+a { line-height: 1px; display: inline-block; border-radius: 50% }
+#example { min-height:12px }
+ul { list-style: none }
+li { display: inline-block }
+figcaption { text-align: center }
+dt { width: 8em; float: left }
+dl > dd { margin-left: 8em }
+form { height: 532px }
+</style>
+</head><body>
+<h1>SVG + Media Queries + CSS Animated Transition = bork</h1>
+<p>You probably want <a href="./index.html">to go here</a> for an explanation.</p>
+<p>Firefox’s bug means it wont change at all between medium and large. For the Chrome bug, use the slider below to make the image bigger, and it will trigger. It seems to cache the latest in-page media state, so the dynamic image prevents the Large image actually rendering correctly.</p>
+<p>~ johndrinkwater <time datetime="2017-07-28">2017-07-28</time></p>
+
+<dl>
+<dt>Small</dt><dd><img id="head" src="wip-no-animation.svg" height="47" alt="johndrinkwater.head.svg"></dd>
+<dt>Medium<dt><dd><img id="avatar" src="wip-no-animation.svg" height="64" alt="johndrinkwater.avatar.svg"></dd>
+<dt>Large<br>Print</dt><dd><img id="qrcode" src="wip-no-animation.svg" height="267" alt="johndrinkwater.qrcode.svg"></dd>
+</dl>
+
+<p><small>The example below requires JavaScript, sorry</small></p>
+<form oninput="document.getElementById('example').setAttribute('height',value=slider.value);result.value=slider.value">
+		<input id="slider" type="range" mix="1" min="1" max="512" value="230" /><br>
+		<img id="example" src="wip-no-animation.svg" height="245" alt="SVG logo with media queries">
+	</form>
+</body>
+
+<p>And yes, the alignment in these images is by design.</p>
+
+</body></html>
